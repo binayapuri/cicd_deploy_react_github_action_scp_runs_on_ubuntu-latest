@@ -21,6 +21,13 @@ jobs:
 
     - name: Build
       run: npm run build
+    
+    - name: Path
+      run: pwd
+      
+    - name: Items
+      run: ls
+      
 
     - name: Deploy to EC2
       uses: appleboy/scp-action@master
