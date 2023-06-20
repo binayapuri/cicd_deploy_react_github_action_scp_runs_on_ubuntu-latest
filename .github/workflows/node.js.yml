@@ -37,7 +37,7 @@ jobs:
     
     - name: Build & Deploy
       run: |
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > binaya.pem && chmod 600 binaya.pem
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > binaya.pem && chmod 400 binaya.pem
         sleep 60
         sudo scp -o StrictHostKeyChecking=no -i binaya.pem -r build/* ubuntu@44.203.53.193:/var/www/html
 
