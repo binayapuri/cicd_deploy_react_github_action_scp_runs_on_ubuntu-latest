@@ -39,5 +39,5 @@ jobs:
       run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > binaya.pem && chmod 400 binaya.pem
           # sleep 60
-          sudo scp -o StrictHostKeyChecking=no -i binaya.pem -r /home/runner/work/CICD_react_static_Scp/CICD_react_static_Scp/build/  ${{var.UNAME}}@${{var.IP}}:/var/www/html
+          sudo scp -o StrictHostKeyChecking=no -i binaya.pem -r /home/runner/work/CICD_react_static_Scp/CICD_react_static_Scp/build/  ${{secrets.UNAME}}@${{secrets.IP}}:/var/www/html/
 
