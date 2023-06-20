@@ -40,5 +40,5 @@ jobs:
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > binaya.pem && chmod 600 binaya.pem
         sleep 60
         sudo scp -o StrictHostKeyChecking=no -i binaya.pem -r build/* ubuntu@44.203.53.193:/var/www/html
-        sudo chmod 700 /var/www/html/
+        sudo ssh -o StrictHostKeyChecking=no -i binaya.pem ubuntu@44.203.53.193 "sudo chown -R www-data:www-data /var/www/html"
 
