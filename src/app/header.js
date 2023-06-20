@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
     <header className="header">
-      <div><h1>Binaya's Expense Tracker</h1> </div>
+      <div><h1>Binaya's Expense Tracker ,,, yes changes has made </h1> </div>
       
     </header>
     {/* //<div className='server'><ServerInfo/></div> */}
